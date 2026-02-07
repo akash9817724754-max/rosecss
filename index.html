@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sapna</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Inter:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Allura&family=Inter:wght@300;400&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  /* ❌ REMOVED DARK OVERLAY */
+  background-image: url("https://images.unsplash.com/photo-1496062031456-07b8f162a322");
+  background-size: cover;
+  background-position: center;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+}
+
+/* Scene */
+.scene {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+/* TEXT CONTAINER – LIGHT GLASS */
+.text {
+  position: absolute;
+  bottom: 80px;
+  left: 90px;
+  max-width: 420px;
+  padding: 22px 26px;
+
+  /* VERY LIGHT PANEL */
+  background: rgba(0,0,0,0.18);
+  backdrop-filter: blur(3px);
+  border-radius: 14px;
+
+  animation: fadeUp 2s ease forwards;
+}
+
+/* NAME */
+.text h1 {
+  font-family: 'Italianno', cursive;
+  font-size: 54px;
+  margin-bottom: 6px;
+  color: black;
+
+  /* STRONG SHADOW */
+  text-shadow: 0 6px 20px rgba(0,0,0,0.9);
+}
+
+/* SUBTITLE */
+.text .date {
+  font-size: 14px;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+  color: red;
+  text-shadow: 0 4px 14px rgba(0,0,0,0.9);
+}
+
+/* MESSAGE */
+.text p {
+  font-size: 30px;
+  line-height: 1.7;
+  color: #ffffff;
+  font-family: 'Allura', cursive;
+  text-shadow: 0 4px 16px rgba(0,0,0,0.95);
+}
+
+/* Photos */
+.photo {
+  position: absolute;
+  overflow: hidden;
+  background: #000;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7);
+  animation: slowFloat 12s ease-in-out infinite;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Shapes */
+.photo.one {
+  top: 80px;
+  left: 130px;
+  width: 230px;
+  height: 330px;
+  border-radius: 14px;
+}
+
+.photo.two {
+  top: 220px;
+  right: 170px;
+  width: 210px;
+  height: 210px;
+  border-radius: 18px;
+  animation-delay: 3s;
+}
+
+.photo.three {
+  bottom: 170px;
+  right: 360px;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid rgba(255,255,255,0.35);
+  animation-delay: 6s;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slowFloat {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+/* Play button */
+.play-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  padding: 10px 18px;
+  border: 1px solid rgba(255,255,255,0.5);
+  background: rgba(0,0,0,0.3);
+  color: #fff;
+  border-radius: 30px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<button class="play-btn" onclick="document.getElementById('bgm').play()">
+  Play music
+</button>
+
+<audio id="bgm" loop>
+  <source src="https://github.com/akash9817724754-max/rosecss/raw/refs/heads/main/2%20Gulaab%20(Official%20Video)%20BILLA%20SONIPAT%20ALA%20%20Guri%20Nimana%20%20Haryanvi%20Songs%20Haryanavi%202021%20(1).mp3" type="audio/mpeg">
+</audio>
+
+<div class="scene">
+
+  <div class="photo one">
+    <a href="https://ibb.co/k664M7yS"><img src="https://i.ibb.co/wrrSYkLz/Whats-App-Image-2026-02-07-at-6-49-30-AM-1.jpg" alt="Whats-App-Image-2026-02-07-at-6-49-30-AM-1" border="0"></a>
+  </div>
+
+  <div class="photo two">
+    <a href="https://ibb.co/7dQXpYwN"><img src="https://i.ibb.co/gLd3Wj5F/Whats-App-Image-2026-02-07-at-6-49-30-AM.jpg" alt="Whats-App-Image-2026-02-07-at-6-49-30-AM" border="0"></a><br /><a target='_blank' href='https://dedupelist.com/'>dedupe tool in browser only</a><br />
+  </div>
+
+  <div class="photo three">
+    <img src="https://i.ibb.co/v408mLkD/MJ.jpg">
+  </div>
+
+  <div class="text">
+    <h1>Mattu</h1>
+    <div class="date">LOVE OF MY LIFE</div>
+    <p>
+      Happy Rose Day<br>
+      To my hot, beautiful and sexy GF.<br>
+      Tum bahut sundar ho… rose toh kuch bhi nahi.
+    </p>
+  </div>
+
+</div>
+
+</body>
+</html>
